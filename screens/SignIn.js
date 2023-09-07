@@ -6,6 +6,7 @@ const SignIn = () => {
     return(
     <View style={styles.mainView}>
     <Text>Sign In</Text>
+    <Button title="Go to sign up"></Button>
     </View>)
 }
 
