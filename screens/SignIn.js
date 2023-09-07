@@ -10,10 +10,8 @@ const SignIn = ({navigation}) => {
 
     return(
     <View style={styles.mainView}>
-    <Text>Sign In</Text>
-    <Button title="Go to sign up"
-    onPress={navigate}
-    ></Button>
+        <View style={styles.TopView}></View>
+        <View style={styles.BottomView}></View>
     </View>)
 }
 
@@ -24,6 +22,17 @@ const styles = StyleSheet.create({
       flexDirection: 'column',
       justifyContent:'center',
       alignItems:'center'
+    },
+    TopView: {
+        width: '100%',
+        height: '40%'
+    },
+    BottomView: {
+        width: '100%',
+        height: '60%',
+        backgroundColor: '#000',
+        borderTopLeftRadius: 30,
+        borderTopRightRadius: 30
     },
     textStyle: {
       color: '#fff',
