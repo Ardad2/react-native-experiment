@@ -2,10 +2,10 @@ import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
 
-const SignIn = () => {
+const SignUp = () => {
     return(
     <View style={styles.mainView}>
-    <Text>Sign In</Text>
+    <Text>Sign Up</Text>
     </View>)
 }
 
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
     }
   });
 
-export default SignIn
+export default SignUp
