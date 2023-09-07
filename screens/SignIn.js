@@ -2,11 +2,18 @@ import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
 
-const SignIn = () => {
+const SignIn = ({navigation}) => {
+
+    function navigate() {
+        navigation.navigate('signUp')
+    }
+
     return(
     <View style={styles.mainView}>
     <Text>Sign In</Text>
-    <Button title="Go to sign up"></Button>
+    <Button title="Go to sign up"
+    onPress={navigate}
+    ></Button>
     </View>)
 }
 
