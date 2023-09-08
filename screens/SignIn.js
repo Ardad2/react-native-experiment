@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
 
 const SignIn = ({navigation}) => {
@@ -10,13 +10,32 @@ const SignIn = ({navigation}) => {
 
     return(
     <View style={styles.mainView}>
-        <View style={styles.TopView}></View>
-        <View style={styles.BottomView}></View>
+        <View style={styles.TopView}>
+
+        </View>
+
+        <View style={styles.BottomView}>
+
+            <Text style={styles.Heading}>
+            Welcome{'\n'} back
+            </Text>
+            <View style={styles.FormView}>
+                <TextInput placeholder={"Email address"} placeholderTextColor={"#fff"} style={styles.TextInput}/>
+                <TextInput placeholder={"Password"} secureTextEntry={true} placeholderTextColor={"#fff"} style={styles.TextInput}/>
+                <TouchableOpacity style={styles.Button}>
+                    <Text>Sign In</Text>
+                </TouchableOpacity>
+            </View>
+            <TouchableOpacity style={styles.Button} onPress={navigate}>
+                    <Text>Sign Up</Text>
+                </TouchableOpacity>
+        </View>
+            
     </View>)
 }
 
 const styles = StyleSheet.create({
-    mainView: {
+    mainView: { 
       marginTop: 40,
       flex: 1,
       flexDirection: 'column',
@@ -25,7 +44,10 @@ const styles = StyleSheet.create({
     },
     TopView: {
         width: '100%',
-        height: '40%'
+        height: '40%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     BottomView: {
         width: '100%',
@@ -36,7 +58,34 @@ const styles = StyleSheet.create({
     },
     textStyle: {
       color: '#fff',
+    },
+    Heading: {
+        color: '#fff',
+        fontSize: 36,
+        fontWeight: 'bold',
+        marginLeft: 15,
+        marginTop: 30
+    },
+    FormView: {
+        width: '100%',
+        display:'flex',
+        flexDirection:'column',
+        justifyContent:'center'
+    },
+
+    TextInput:{
+        width: '90%',
+        borderWidth: 1,
+        borderColor: '#fff',
+        color: '#fff',
+    },
+    Button: {
+        width: '90%',
+        color: '#000',
+        height: 52,
+        backgroundColor: '#fff'
     }
+    
   });
 
 export default SignIn
