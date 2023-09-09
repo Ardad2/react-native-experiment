@@ -2,9 +2,9 @@ import React from 'react';
 import { Button, StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import BackIcon from 'react-native-vector-icons/Feather';
 
-const SignUp = () => {
+const SignUp = ({navigation}) => {
     function navigate() {
-        navigation.navigate('signUp')
+        navigation.navigate('signIn')
     }
 
     return(
@@ -14,7 +14,7 @@ const SignUp = () => {
         </View>
 
         <ScrollView style={styles.BottomView}>
-            <BackIcon name="chevron-left" size={30} color={"#fff"}/>
+            <BackIcon onPress={navigate} name="chevron-left" size={60} color={"#fff"}/>
 
             <Text style={styles.Heading}>
             Welcome{'\n'} back
