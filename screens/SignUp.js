@@ -1,10 +1,12 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import BackIcon from 'react-native-vector-icons/Feather';
+import {firebase} from '../Firebase/firebase';
 
 const SignUp = ({navigation}) => {
     function navigate() {
         navigation.navigate('signIn')
+        console.log(firebase)
     }
 
     return(
