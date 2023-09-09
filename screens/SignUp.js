@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView } from 'react-native';
-
+import BackIcon from 'react-native-vector-icons/Feather';
 
 const SignUp = () => {
     function navigate() {
@@ -14,6 +14,7 @@ const SignUp = () => {
         </View>
 
         <ScrollView style={styles.BottomView}>
+            <BackIcon name="chevron-left" size={30} color={"#fff"}/>
 
             <Text style={styles.Heading}>
             Welcome{'\n'} back
